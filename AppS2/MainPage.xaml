@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS2.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Sistema de Calificaciones UNIVERSIDAD ISRAEL" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="lblContraseña" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+        <Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota Primera Parcial:" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtValorS1" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Examen Momento UNO:" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtValorE1" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Promedio Primera Parcial:" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtResultado1" IsEnabled="False" Grid.Row="2" Grid.Column="1"/>
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nota Segunda Parcial:" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtValorS2" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Examen momento DOS:" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtValorE2" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Promedio segunda Parcial:" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtResultado2" IsEnabled="False" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="Calificación Final:" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtNotaFin" IsEnabled="False" Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+
+        <Button x:Name="btnVerificar" Text="Verificar" Clicked="btnVerificar_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
